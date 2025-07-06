@@ -1,0 +1,18 @@
+frontend:
+  deploymentname: frontend-deployment
+  replicas: 1
+  image: 657001761946.dkr.ecr.us-east-1.amazonaws.com/frontend-repo:latest
+  servicename: frontend-service
+  type: LoadBalancer
+
+backend:
+  deploymentname: backend-deployment
+  replicas: 1
+  image: 657001761946.dkr.ecr.us-east-1.amazonaws.com/backend-repo:latest
+  servicename: backend-service
+
+db:
+  secrets:
+    name: db-secrets
+    username: dmlqYXk=
+    password: UGFzc3dvcmQxMjM=
