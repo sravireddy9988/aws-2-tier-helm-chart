@@ -20,7 +20,7 @@ helm-chart/
 
 - The database `username` and `password` for `AWS RDS` are stored securely in `Kubernetes Secrets`.
 
-- The secrets are referenced in the frontend deployment and passed as environment variables.
+- The `secrets` are referenced in the `backend deployment` and passed as environment variables.
 
 - These values are defined and managed via `values.yaml`.
 
