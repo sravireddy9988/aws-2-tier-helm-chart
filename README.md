@@ -20,7 +20,7 @@ helm-chart/
 
 - The database `username` and `password` for `AWS RDS` are stored securely in `Kubernetes Secrets`.
 
-- The secrets are referenced in the backend deployment and passed as environment variables.
+- The secrets are referenced in the frontend deployment and passed as environment variables.
 
 - These values are defined and managed via `values.yaml`.
 
@@ -53,13 +53,16 @@ db:
 
 ```
 git clone https://github.com/vijaygiduthuri/aws-2-tier-helm-chart.git
-cd aws-2-tier-helm-chart
+cd helm-chart
 ```
 
 - Install the Helm chart:
 
 ```
 helm install railway-app ./helm-chart
+helm status railway-app
+(or)
+helm ls
 ```
 
 - Upgrade the release (on changes):
